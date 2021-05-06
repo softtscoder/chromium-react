@@ -1,0 +1,45 @@
+{
+  "name": "@neotracker/shared-web-next",
+  "version": "0.0.1-alpha.0",
+  "keywords": [
+    "neo",
+    "blockchain",
+    "neotracker"
+  ],
+  "description": "NEO Tracker shared web code.",
+  "repository": "https://github.com/neotracker/neotracker",
+  "bugs": "https://github.com/neotracker/neotracker/issues",
+  "license": "MIT",
+  "main": "./src/index.ts",
+  "dependencies": {
+    "@neo-one/client-common": "^2.4.0",
+    "@neo-one/client-core": "^2.4.0",
+    "@neo-one/client-switch": "^2.4.0",
+    "@neo-one/utils": "^2.4.0",
+    "@neotracker/shared-utils": "0.0.1-alpha.0",
+    "apollo-client": "^2.4.6",
+    "graphql": "14.5.8",
+    "graphql-tag": "^2.10.0",
+    "lodash": "^4.17.11",
+    "prop-types": "^15.6.2",
+    "react": "^16.7.0",
+    "react-helmet": "^5.2.0",
+    "react-known-props": "^2.4.0",
+    "react-loadable": "^5.5.0",
+    "react-router": "4.4.0-beta.1",
+    "rxjs": "^6.3.3",
+    "styled-components": "^4.1.3"
+  },
+  "devDependencies": {
+    "@neotracker/component-explorer": "^0.0.1-alpha.0",
+    "@neotracker/server-graphql": "^0.0.1-alpha.0",
+    "apollo-cache-inmemory": "^1.3.10",
+    "apollo-link": "^1.2.3",
+    "apollo-link-schema": "^1.1.1",
+    "faker": "^4.1.0",
+    "graphql-tools": "^4.0.3",
+    "source-map-support": "^0.5.9",
+    "ts-node": "^7.0.1"
+  },
+  "sideEffects": false
+}

@@ -32,3 +32,9 @@ services:
     #       cpus: ${DOCKER_CPUS_LIMIT:-1}
     #       memory: ${DOCKER_MEMORY_LIMIT:-1024M}
     restart: always
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:1340"]
+      interval: 30s
+      timeout: 30s
+      retries: 2
+      start_period: 15s

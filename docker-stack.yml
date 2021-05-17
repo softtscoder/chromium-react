@@ -1,0 +1,34 @@
+version: "3.7"
+
+networks:
+  cryptocean-network:
+    driver: bridge
+    name: cryptocean-network
+    attachable: true
+
+services:
+  cryptocean-cronium-tracker:
+    container_name: ${DOCKER_NAME:-cryptocean-cronium-tracker.latest}
+    image: ${DOCKER_IMAGE:-cryptocean-cronium-tracker:latest}
+    build:
+      context: .
+      dockerfile: Dockerfile
+    init: true
+    tty: true
+    stdin_open: true
+    networks: 
+      - cryptocean-network
+    ports:
+      - ${TRACKER_PORT-1340:1340}
+    logging:
+      options:
+        max-size: 10M
+        max-file: "5"
+    volumes:
+      -  ${TRACKER_PATH:-/opt/cryptocean/cryptocean-cronium-tracker/.neotrackerrc}:/opt/tracker/.neotrackerrc
+    # deploy:
+    #   resources:
+    #     limits:
+    #       cpus: ${DOCKER_CPUS_LIMIT:-1}
+    #       memory: ${DOCKER_MEMORY_LIMIT:-1024M}
+    restart: always

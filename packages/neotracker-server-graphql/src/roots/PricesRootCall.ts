@@ -137,7 +137,7 @@ export class PricesRootCall extends RootCall {
   public static initialize$(options$: Observable<RootCallOptions>): Observable<any> {
     return combineLatest([options$.pipe(distinctUntilChanged()), timer(0, FIVE_MINUTES_IN_SECONDS * 1000)]).pipe(
       switchMap(async () => {
-        await Promise.all([this.refreshDataPoints('NEO', 'BTC'), this.refreshDataPoints('NEO', 'USD')]);
+        await Promise.all([this.refreshDataPoints('CRON', 'BTC'), this.refreshDataPoints('CRON', 'USD')]);
       }),
     );
   }

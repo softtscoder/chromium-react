@@ -1,6 +1,6 @@
 /**
  * @flow
- * @relayHash 8183a8da3d06b2401500a2fa97bde4fe
+ * @relayHash d1d2d88b08b6b1cf76938f82e5dd00ce
  */
 
 /* eslint-disable */
@@ -65,11 +65,11 @@ query HomeQuery {
       }
     }
   }
-  neo_btc_data_points: prices(from: "NEO", to: "BTC") {
+  neo_btc_data_points: prices(from: "CRON", to: "BTC") {
     ...MarketCard_neo_btc_data_points
     id
   }
-  neo_usd_data_points: prices(from: "NEO", to: "USD") {
+  neo_usd_data_points: prices(from: "CRON", to: "USD") {
     ...MarketCard_neo_usd_data_points
     id
   }
@@ -228,7 +228,7 @@ v1 = [
 v2 = {
   "kind": "Literal",
   "name": "from",
-  "value": "NEO",
+  "value": "CRON",
   "type": "String!"
 },
 v3 = [
@@ -286,7 +286,7 @@ return {
   "kind": "Request",
   "operationKind": "query",
   "name": "HomeQuery",
-  "id": "14",
+  "id": "62",
   "text": null,
   "metadata": {},
   "fragment": {
@@ -376,7 +376,7 @@ return {
         "kind": "LinkedField",
         "alias": "neo_btc_data_points",
         "name": "prices",
-        "storageKey": "prices(from:\"NEO\",to:\"BTC\")",
+        "storageKey": "prices(from:\"CRON\",to:\"BTC\")",
         "args": v3,
         "concreteType": "DataPoint",
         "plural": true,
@@ -392,7 +392,7 @@ return {
         "kind": "LinkedField",
         "alias": "neo_usd_data_points",
         "name": "prices",
-        "storageKey": "prices(from:\"NEO\",to:\"USD\")",
+        "storageKey": "prices(from:\"CRON\",to:\"USD\")",
         "args": v4,
         "concreteType": "DataPoint",
         "plural": true,
@@ -542,7 +542,7 @@ return {
         "kind": "LinkedField",
         "alias": "neo_btc_data_points",
         "name": "prices",
-        "storageKey": "prices(from:\"NEO\",to:\"BTC\")",
+        "storageKey": "prices(from:\"CRON\",to:\"BTC\")",
         "args": v3,
         "concreteType": "DataPoint",
         "plural": true,
@@ -552,7 +552,7 @@ return {
         "kind": "LinkedField",
         "alias": "neo_usd_data_points",
         "name": "prices",
-        "storageKey": "prices(from:\"NEO\",to:\"USD\")",
+        "storageKey": "prices(from:\"CRON\",to:\"USD\")",
         "args": v4,
         "concreteType": "DataPoint",
         "plural": true,
@@ -610,5 +610,5 @@ return {
 };
 })();
 // prettier-ignore
-(node/*: any*/).hash = 'c21c6e732bfd9e3192eae7fc06275db3';
+(node/*: any*/).hash = '17e36790edf3c5f2fd8dfda139719605';
 module.exports = node;

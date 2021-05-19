@@ -279,10 +279,10 @@ export default (queryRenderer(graphql`
         }
       }
     }
-    neo_btc_data_points: prices(from: "NEO", to: "BTC") {
+    neo_btc_data_points: prices(from: "CRON", to: "BTC") {
       ...MarketCard_neo_btc_data_points
     }
-    neo_usd_data_points: prices(from: "NEO", to: "USD") {
+    neo_usd_data_points: prices(from: "CRON", to: "USD") {
       ...MarketCard_neo_usd_data_points
     }
     neo_current_price: current_price(sym: "NEO") {

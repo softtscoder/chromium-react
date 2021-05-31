@@ -183,14 +183,6 @@ function AccountViewBase({
           component="p"
           value={claimValueAvailable}
         />
-        {appOptions.disableWalletModify ||
-        (wallet != null && wallet.type === 'locked') ? null : (
-          <ClaimGASButton
-            className={classNames(classes.marginLeft, classes.marginTop)}
-            account={account}
-            onClaimConfirmed={onClaimConfirmed}
-          />
-        )}
       </div>
       <ClaimGASSteps
         className={classNames(classes.steps, classes.margin)}

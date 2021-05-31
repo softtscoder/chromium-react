@@ -315,6 +315,9 @@ const enhance: HOC<*, *> = compose(
           amount: new BigNumber(confirmTransaction.amount),
           assetType: confirmTransaction.asset.type,
           assetHash: getID(confirmTransaction.asset.id),
+          networkFee: confirmTransaction.networkFee
+              ? new BigNumber(confirmTransaction.networkFee)
+              : undefined,
             })
         .then((hash) => {
           setState((prevState) => ({

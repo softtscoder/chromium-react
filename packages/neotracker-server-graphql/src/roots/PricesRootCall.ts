@@ -18,7 +18,7 @@ interface Args {
   readonly to: string;
 }
 
-const FIVE_MINUTES_IN_SECONDS = 5 * 60;
+const FIVE_MINUTES_IN_SECONDS = 30 * 60;
 
 const serverGQLLogger = createChild(serverLogger, { component: 'graphql' });
 

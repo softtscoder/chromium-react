@@ -14,7 +14,7 @@ import { GraphQLContext } from '../GraphQLContext';
 import { RootCall, RootCallOptions } from '../lib';
 import { liveExecuteField } from '../live';
 
-const FIVE_MINUTES_IN_SECONDS = 5 * 60;
+const FIVE_MINUTES_IN_SECONDS = 30 * 60;
 const GAS = 'GAS';
 const SYM_TO_COINMARKETCAP_ID = {
   NEO: 4309,

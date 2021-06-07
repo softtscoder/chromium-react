@@ -153,17 +153,17 @@ function AppFooter({
 
 
         <Typography className={classes.copyright} variant="caption">
-          {`${appOptions.meta.name} © 2019`}
+          {`${appOptions.meta.name} © 2021`}
         </Typography>
       </div>
       <ul className={classes.footerUl}>
-        <FooterLink href="#">Where to buy</FooterLink>
-        <FooterLink href="#">About CRON</FooterLink>
-        <FooterLink href="#">Wallet</FooterLink>
-        <FooterLink href="#">Integration</FooterLink>
-        <FooterLink href="#">Partnership</FooterLink>
-        <FooterLink href="#">Team</FooterLink>
-        <FooterLink href="#">Contact</FooterLink>
+        <FooterLink href="https://bitchange.online/">Where to buy</FooterLink>
+        <FooterLink href="https://cryptocean.io/">About CRON</FooterLink>
+        <FooterLink href="/wallet">Wallet</FooterLink>
+        <FooterLink href="https://github.com/cronfoundation/cron-node">Integration</FooterLink>
+        <FooterLink href="https://cryptocean.io#partners">Partnership</FooterLink>
+        <FooterLink href="https://cryptocean.io#team">Team</FooterLink>
+        <FooterLink href="mailto:support@bitchange.online">Contact</FooterLink>
       </ul>
     </div>
   );

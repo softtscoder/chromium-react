@@ -14,6 +14,7 @@ import { PageLoading } from '../components/common/loading';
 import { Button, Card, Typography, withStyles } from '../lib/base';
 import { BlockTable } from '../components/explorer/block';
 import { SearchCard } from '../components/explorer/search';
+import { UnderCard } from '../components/explorer/under';
 import { TransactionTable } from '../components/explorer/transaction';
 
 import { createSafeRetry } from '../utils';
@@ -220,6 +221,7 @@ function Home({
 
   return (
     <div className={classNames(className, classes.root)}>
+      <UnderCard className={classes.marketCard} />
       <SearchCard className={classes.marketCard} />
       <MainSelectCard className={classes.marketCard} />
       <MarketCard

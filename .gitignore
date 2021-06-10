@@ -7,6 +7,9 @@ pids
 *.pid
 *.seed
 
+# Github
+.github/
+
 # Coverage directory used by tools like istanbul
 coverage
 

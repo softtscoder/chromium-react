@@ -221,7 +221,7 @@ function Home({
 
   return (
     <div className={classNames(className, classes.root)}>
-      <UnderCard className={classes.marketCard} />
+      {/* <UnderCard className={classes.marketCard} /> */}
       <SearchCard className={classes.marketCard} />
       <MainSelectCard className={classes.marketCard} />
       <MarketCard
@@ -269,7 +269,7 @@ export default (queryRenderer(graphql`
       }
     }
     transactions(
-      orderBy: [{ name: "transaction.id", direction: "desc" }]
+      orderBy: [{ name: "transaction.block_id", direction: "desc" }]
       filters: [
         { name: "transaction.type", operator: "!=", value: "MinerTransaction" }
       ]

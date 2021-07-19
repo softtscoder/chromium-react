@@ -96,7 +96,7 @@ export default (queryRenderer(
   graphql`
     query TransactionSearchQuery($first: Int!, $after: String) {
       transactions(
-        orderBy: [{ name: "transaction.id", direction: "desc" }]
+        orderBy: [{ name: "transaction.block_id", direction: "desc" }]
         filters: [
           {
             name: "transaction.type"

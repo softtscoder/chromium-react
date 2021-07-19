@@ -1,6 +1,6 @@
 /**
  * @flow
- * @relayHash d1d2d88b08b6b1cf76938f82e5dd00ce
+ * @relayHash fe33c94e7b3d06c786f5c1ee2e33d75b
  */
 
 /* eslint-disable */
@@ -57,7 +57,7 @@ query HomeQuery {
       }
     }
   }
-  transactions(orderBy: [{name: "transaction.id", direction: "desc"}], filters: [{name: "transaction.type", operator: "!=", value: "MinerTransaction"}], first: 20) {
+  transactions(orderBy: [{name: "transaction.block_id", direction: "desc"}], filters: [{name: "transaction.type", operator: "!=", value: "MinerTransaction"}], first: 20) {
     edges {
       node {
         ...TransactionTable_transactions
@@ -219,7 +219,7 @@ v1 = [
     "value": [
       {
         "direction": "desc",
-        "name": "transaction.id"
+        "name": "transaction.block_id"
       }
     ],
     "type": "[OrderByInput!]"
@@ -286,7 +286,7 @@ return {
   "kind": "Request",
   "operationKind": "query",
   "name": "HomeQuery",
-  "id": "62",
+  "id": "67",
   "text": null,
   "metadata": {},
   "fragment": {
@@ -338,7 +338,7 @@ return {
         "kind": "LinkedField",
         "alias": null,
         "name": "transactions",
-        "storageKey": "transactions(filters:[{\"name\":\"transaction.type\",\"operator\":\"!=\",\"value\":\"MinerTransaction\"}],first:20,orderBy:[{\"direction\":\"desc\",\"name\":\"transaction.id\"}])",
+        "storageKey": "transactions(filters:[{\"name\":\"transaction.type\",\"operator\":\"!=\",\"value\":\"MinerTransaction\"}],first:20,orderBy:[{\"direction\":\"desc\",\"name\":\"transaction.block_id\"}])",
         "args": v1,
         "concreteType": "TransactionsConnection",
         "plural": false,
@@ -487,7 +487,7 @@ return {
         "kind": "LinkedField",
         "alias": null,
         "name": "transactions",
-        "storageKey": "transactions(filters:[{\"name\":\"transaction.type\",\"operator\":\"!=\",\"value\":\"MinerTransaction\"}],first:20,orderBy:[{\"direction\":\"desc\",\"name\":\"transaction.id\"}])",
+        "storageKey": "transactions(filters:[{\"name\":\"transaction.type\",\"operator\":\"!=\",\"value\":\"MinerTransaction\"}],first:20,orderBy:[{\"direction\":\"desc\",\"name\":\"transaction.block_id\"}])",
         "args": v1,
         "concreteType": "TransactionsConnection",
         "plural": false,
@@ -610,5 +610,5 @@ return {
 };
 })();
 // prettier-ignore
-(node/*: any*/).hash = '17e36790edf3c5f2fd8dfda139719605';
+(node/*: any*/).hash = 'cc13edb75925628898142c1d50d9ea1a';
 module.exports = node;

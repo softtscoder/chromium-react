@@ -1,6 +1,6 @@
 /**
  * @flow
- * @relayHash e45d916864a4046f54256bf4c0a0a050
+ * @relayHash 15ded416ff07ba6e6ced568b70964e44
  */
 
 /* eslint-disable */
@@ -39,7 +39,7 @@ query TransactionSearchQuery(
   $first: Int!
   $after: String
 ) {
-  transactions(orderBy: [{name: "transaction.id", direction: "desc"}], filters: [{name: "transaction.type", operator: "!=", value: "MinerTransaction"}], first: $first, after: $after) {
+  transactions(orderBy: [{name: "transaction.block_id", direction: "desc"}], filters: [{name: "transaction.type", operator: "!=", value: "MinerTransaction"}], first: $first, after: $after) {
     edges {
       node {
         ...TransactionPagingView_transactions
@@ -130,7 +130,7 @@ v1 = [
     "value": [
       {
         "direction": "desc",
-        "name": "transaction.id"
+        "name": "transaction.block_id"
       }
     ],
     "type": "[OrderByInput!]"
@@ -165,7 +165,7 @@ return {
   "kind": "Request",
   "operationKind": "query",
   "name": "TransactionSearchQuery",
-  "id": "2",
+  "id": "66",
   "text": null,
   "metadata": {},
   "fragment": {
@@ -288,5 +288,5 @@ return {
 };
 })();
 // prettier-ignore
-(node/*: any*/).hash = '4860721ba4e9f38229ff36fc7e9905a5';
+(node/*: any*/).hash = '289ba9af1d5da9501def323a6cc879cc';
 module.exports = node;

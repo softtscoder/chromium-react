@@ -1,6 +1,6 @@
 /**
  * @flow
- * @relayHash 898c4b6f167ccae536fed811ca390f81
+ * @relayHash abfbbb68027f95899537d024fa5e2b22
  */
 
 /* eslint-disable */
@@ -46,7 +46,7 @@ query AddressTransactionPagingViewQuery(
 ) {
   address(hash: $hash) {
     id
-    transactions(first: $first, after: $after, orderBy: [{name: "address_to_transaction.id2", direction: "desc", type: "literal"}]) {
+    transactions(first: $first, after: $after, orderBy: [{name: "block_id", direction: "desc", type: "literal"}]) {
       edges {
         node {
           ...TransactionPagingView_transactions
@@ -147,7 +147,7 @@ v3 = [
     "value": [
       {
         "direction": "desc",
-        "name": "address_to_transaction.id2",
+        "name": "block_id",
         "type": "literal"
       }
     ],
@@ -183,7 +183,7 @@ return {
   "kind": "Request",
   "operationKind": "query",
   "name": "AddressTransactionPagingViewQuery",
-  "id": "16",
+  "id": "71",
   "text": null,
   "metadata": {},
   "fragment": {
@@ -324,5 +324,5 @@ return {
 };
 })();
 // prettier-ignore
-(node/*: any*/).hash = '4a91dd5c45d7bd840e46b623076a7b27';
+(node/*: any*/).hash = '68d74e15d66e1ed9378d9030d38ccc73';
 module.exports = node;

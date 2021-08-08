@@ -120,7 +120,7 @@ const enhance: HOC<*, *> = compose(
             after: $after
             orderBy: [
               {
-                name: "address_to_transaction.id2"
+                name: "block_id"
                 direction: "desc"
                 type: "literal"
               }

@@ -231,7 +231,7 @@ const enhance: HOC<*, *> = compose(
       toAddress: '',
       toAddressValidation: null,
       amount: '',
-      feeAmount: '',
+      feeAmount: '1',
       amountValidation: null,
       selectedAssetHash: GAS_ASSET_HASH,
       feeAmountValidation: null,
